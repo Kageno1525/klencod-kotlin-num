@@ -1,49 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"> <!-- خلفية سوداء شيك -->
+    android:background="#050505"> <!-- أسود غامق جداً -->
 
-    <!-- الشكل اللي هيتحرك (كرة) -->
+    <!-- النص العلوي -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="CYBER CORE"
+        android:textColor="#00FFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.2" />
+
+    <!-- القلب النيون (هيتحول لدائرة في الكود) -->
     <View
-        android:id="@+id/magicBall"
+        android:id="@+id/neonCore"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_centerInParent="true"
-        android:backgroundTint="#FF5252"
-        android:elevation="20dp"
-        android:background="@android:drawable/btn_default" /> <!-- شكل دائري مبدئي -->
+        android:layout_centerInParent="true" />
 
-    <!-- الأزرار -->
+    <!-- أزرار التحكم -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"
+        android:layout_margin="30dp"
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnRotate"
+            android:id="@+id/btnGlitch"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="دوران 360 درجة"
-            android:textSize="18sp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_height="60dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="#1A1A1A"
+            android:text="💥 GLITCH EFFECT"
+            android:textColor="#FF00FF"
+            android:textStyle="bold"
+            android:textSize="16sp" />
 
         <Button
-            android:id="@+id/btnBounce"
+            android:id="@+id/btnRgb"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="تنطيط (Bounce)"
-            android:textSize="18sp"
-            android:layout_marginBottom="10dp"/>
-
-        <Button
-            android:id="@+id/btnColor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="لون عشوائي"
-            android:textSize="18sp"/>
+            android:layout_height="60dp"
+            android:backgroundTint="#1A1A1A"
+            android:text="🌈 RGB MADNESS"
+            android:textColor="#00FFFF"
+            android:textStyle="bold"
+            android:textSize="16sp" />
     </LinearLayout>
 
 </RelativeLayout>
